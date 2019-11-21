@@ -61,6 +61,8 @@ namespace Mathtastic_Voyage {
                 score = correct / total;
                 blkscore.Text = Convert.ToString(score *100)+ "%";
                 btn_submit.IsEnabled = false;
+                txtans.IsEnabled = false;
+                blkdisplay.Text ="Test Complete!";
             }
             else {
                 blkdisplay.Text = $"{queue.Peek()} =";
@@ -81,7 +83,7 @@ namespace Mathtastic_Voyage {
 
         private string[] ReadFile() {
             FileStream input_file;
-            string file_name = "C:\\Users\\MCA\\Downloads\\Mathtastic Voyage";
+            string file_name = "C:\\Users\\MCA\\source\\repos\\Mathtastic_Voyage\\Mathtastic Voyage.txt";
             
             string[] file_text = File.ReadAllLines(file_name);
 
