@@ -72,20 +72,6 @@ namespace Mathtastic_Voyage{
                     throw new IndexOutOfRangeException("index[" + target_index + "] is not present in this Linked List");
                 }//end Get()
 
-        public override string ToString() {
-           string updated_string = "";
-           string word;
-
-            for (int i = _size-1; i >= 0 ; i--) {
-                word = Convert.ToString(Get(i));
-                if (i >= 1) {
-                    updated_string += $"{word} ";
-                }
-                else {
-                    updated_string += $"{word} <---TOP";
-                }
-            }
-            return $"{updated_string}";
-        }
+        
     }//end class
 }

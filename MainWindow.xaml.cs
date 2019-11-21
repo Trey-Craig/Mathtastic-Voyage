@@ -30,20 +30,43 @@ namespace Mathtastic_Voyage {
             blkdisplay.Text = $"{queue.Peek()} =";
         }//end constructor
 
-        private void btn_submit_Click(object sender, RoutedEventArgs e) {            
-            maths.Correct = PostFix(queue.Peek());
+        private void btn_submit_Click(object sender, RoutedEventArgs e) {  
+            
+
+            maths.ConverttoPostFix(maths.FixInfixLayout(queue.Peek()));
+
+            char[] split_args = { ' ', '\t', '\n'};
+
+            maths.Correct = PostFix(maths.Postfix.Split(split_args, StringSplitOptions.RemoveEmptyEntries));
             maths.User = txtans.Text;
+
             if(maths.Correct == maths.User) {
                 correct++;
-                lst_correct.Items.Add(queue.Peek());
+                lst_correct.Items.Add(queue.Peek() + $"= {maths.User}");
                 lst_problems.Items.Remove(queue.Peek());
                 queue.Dequeue();
 
             }
             else {
                 incorrect++;
+                lst_incorrect.Items.Add(queue.Peek() + $"= {maths.User}");
+                lst_problems.Items.Remove(queue.Peek());
+                queue.Dequeue();
             }
 
+
+            if(queue.Empty) {
+                int score = 0;
+                int total = correct + incorrect;
+                score = correct / total;
+                blkscore.Text = Convert.ToString(score *100)+ "%";
+                btn_submit.IsEnabled = false;
+            }
+            else {
+                blkdisplay.Text = $"{queue.Peek()} =";
+                txtans.Clear();
+            }
+            
 
 
         }
@@ -54,7 +77,6 @@ namespace Mathtastic_Voyage {
                 queue.Enqueue(item);
                 lst_problems.Items.Add(item);
             }
-
         }
 
         private string[] ReadFile() {
@@ -66,9 +88,9 @@ namespace Mathtastic_Voyage {
             return file_text;
         }
 
-        private string PostFix(string text) {
+        private string PostFix(string[] text) {
             //split input into a string array
-            string[] split_text = text.Split(' ');
+            
 
             //create new Stack variable
             Stack <string> new_stack = new Stack<string>();
@@ -78,21 +100,21 @@ namespace Mathtastic_Voyage {
             string operand2 = "";
             string result = "";
             
-            for (int i = 0; i < split_text.Length; i++) {
+            for (int i = 0; i < text.Length; i++) {
                 //if split_text is equal to an operator....
-                if (ContainsOperator(split_text[i])) {
+                if (ContainsOperator(text[i])) {
                     //....Pop and Store values
                     operand2 = new_stack.Pop();
                     operand1 = new_stack.Pop();
 
                     //Evaluate to get new value then Push it onto the stack 
-                    result = Evaluate(operand1,operand2,split_text[i]);
+                    result = Evaluate(operand1,operand2,text[i]);
                     new_stack.Push(result);                    
                 }
                 //if split_text is not an operator...
                 else {
                     //....split_text is pushed onto stack
-                    new_stack.Push(split_text[i]);
+                    new_stack.Push(text[i]);
                 }
             } 
             //return top of stack to be posted in the results box

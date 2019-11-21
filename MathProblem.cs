@@ -51,10 +51,10 @@ namespace Mathtastic_Voyage {
 
             foreach(char item in infix_array) {
                 if(item == '-' && infix_array[count + 1] >= 0 || item == '-' && infix_array[count + 1] <= 9) {
-                    final_infix += $" {item} ";
+                    final_infix += $" {item}";
                 }
                 else if (item == '+' || item == '-' || item == '*' || item == '/' || item == '^' || item == '(' || item == ')') {
-                    final_infix += $" {item}";
+                    final_infix += $" {item} ";
                 }
                 else {
                     final_infix += $"{item}";

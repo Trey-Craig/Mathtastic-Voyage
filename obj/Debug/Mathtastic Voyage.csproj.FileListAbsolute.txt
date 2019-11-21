@@ -12,3 +12,17 @@ C:\Users\MCA\source\repos\Mathtastic Voyage\obj\Debug\Mathtastic_Voyage.Properti
 C:\Users\MCA\source\repos\Mathtastic Voyage\obj\Debug\Mathtastic Voyage.csproj.GenerateResource.cache
 C:\Users\MCA\source\repos\Mathtastic Voyage\obj\Debug\Mathtastic Voyage.exe
 C:\Users\MCA\source\repos\Mathtastic Voyage\obj\Debug\Mathtastic Voyage.pdb
+C:\Users\MCA\source\repos\Mathtastic_Voyage\bin\Debug\Mathtastic Voyage.exe.config
+C:\Users\MCA\source\repos\Mathtastic_Voyage\bin\Debug\Mathtastic Voyage.exe
+C:\Users\MCA\source\repos\Mathtastic_Voyage\bin\Debug\Mathtastic Voyage.pdb
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage.csprojAssemblyReference.cache
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\MainWindow.g.cs
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\App.g.cs
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage_MarkupCompile.cache
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage_MarkupCompile.lref
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\MainWindow.baml
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage.g.resources
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic_Voyage.Properties.Resources.resources
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage.csproj.GenerateResource.cache
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage.exe
+C:\Users\MCA\source\repos\Mathtastic_Voyage\obj\Debug\Mathtastic Voyage.pdb
