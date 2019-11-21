@@ -1,0 +1,24 @@
+﻿<Window x:Class="Mathtastic_Voyage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mathtastic_Voyage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lst_problems" HorizontalAlignment="Left" Height="228" Margin="22,50,0,0" VerticalAlignment="Top" Width="200"/>
+        <ListBox x:Name="lst_correct" HorizontalAlignment="Left" Height="228" Margin="261,50,0,0" VerticalAlignment="Top" Width="218"/>
+        <ListBox x:Name="lst_incorrect" HorizontalAlignment="Left" Height="228" Margin="552,50,0,0" VerticalAlignment="Top" Width="216"/>
+        <Label x:Name="lbl_problem" Content="Math Problems" HorizontalAlignment="Left" Margin="22,21,0,0" VerticalAlignment="Top" Height="24" Width="97"/>
+        <Label x:Name="lbl_correct" Content="Correct" HorizontalAlignment="Left" Margin="261,21,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="lbl_incorrect" Content="Incorrect" HorizontalAlignment="Left" Margin="552,21,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_answer" Content="Answer" HorizontalAlignment="Left" Margin="16,299,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="blkdisplay" HorizontalAlignment="Left" Margin="22,325,0,0" TextWrapping="Wrap" Text="3 + 5 =" VerticalAlignment="Top" Height="28" Width="161"/>
+        <TextBox x:Name="txtans" HorizontalAlignment="Left" Height="23" Margin="188,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"/>
+        <Button x:Name="btn_submit" Content="Submit" HorizontalAlignment="Left" Margin="319,314,0,0" VerticalAlignment="Top" Width="160" Height="57" Click="btn_submit_Click"/>
+        <Label x:Name="lblscore" Content="SCORE" HorizontalAlignment="Left" Margin="552,299,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="blkscore" HorizontalAlignment="Left" Margin="552,334,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="37" Width="98"/>
+
+    </Grid>
+</Window>
